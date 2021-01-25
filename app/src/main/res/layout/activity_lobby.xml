@@ -56,15 +56,6 @@
         app:layout_constraintTop_toTopOf="@+id/txt_score_lobby"
         app:srcCompat="@drawable/coin" />
 
-    <ImageView
-        android:id="@+id/imageViewLobby"
-        android:layout_width="130dp"
-        android:layout_height="39dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageViewTop"
-        app:layout_constraintEnd_toStartOf="@+id/txt_score_lobby"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageViewTop"
-        app:srcCompat="@drawable/lobby" />
 
     <ImageView
         android:id="@+id/imageView6"
