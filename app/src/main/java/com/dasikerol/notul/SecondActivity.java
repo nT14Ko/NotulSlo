@@ -11,12 +11,13 @@ import android.widget.Toast;
 
 import com.dasikerol.notul.ImageViewScrolling.IEventEnd;
 import com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling;
+import com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling2;
 
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity implements IEventEnd {
+public class SecondActivity extends AppCompatActivity implements IEventEnd  {
 
-    ImageViewScrolling image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11,image12,image13,image14,image15;
+    ImageViewScrolling2 image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11,image12,image13,image14,image15;
     Button buttonSpin;
     Button buttonAutoSpin;
     TextView txt_score, txt_bet, txt_exp;
@@ -35,9 +36,9 @@ public class MainActivity extends AppCompatActivity implements IEventEnd {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        buttonSpin = findViewById(R.id.buttonSpin);
-        buttonAutoSpin = findViewById(R.id.buttonAutoSpin);
+        setContentView(R.layout.activity_second);
+        buttonSpin = findViewById(R.id.b1uttonSpin);
+        buttonAutoSpin = findViewById(R.id.b1uttonAutoSpin);
         bet = 50;
         autoSpin = false;
         spinEnd = true;
@@ -52,39 +53,39 @@ public class MainActivity extends AppCompatActivity implements IEventEnd {
         three = randomLine();
         four = randomLine();
         five = randomLine();
-        txt_exp = findViewById(R.id.txt_exp_main);
-        image1 = findViewById(R.id.image1);
-        image2 = findViewById(R.id.image2);
-        image3 = findViewById(R.id.image3);
-        image4 = findViewById(R.id.image4);
-        image5 = findViewById(R.id.image5);
-        image6 = findViewById(R.id.image6);
-        image7 = findViewById(R.id.image7);
-        image8 = findViewById(R.id.image8);
-        image9 = findViewById(R.id.image9);
-        image10 = findViewById(R.id.image10);
-        image11 = findViewById(R.id.image11);
-        image12 = findViewById(R.id.image12);
-        image13 = findViewById(R.id.image13);
-        image14 = findViewById(R.id.image14);
-        image15 = findViewById(R.id.image15);
-        txt_score = findViewById(R.id.txt_score_main);
-        txt_bet = findViewById(R.id.txt_bet);
-        image1.setEventEnd(MainActivity.this);
-        image2.setEventEnd(MainActivity.this);
-        image3.setEventEnd(MainActivity.this);
-        image4.setEventEnd(MainActivity.this);
-        image5.setEventEnd(MainActivity.this);
-        image6.setEventEnd(MainActivity.this);
-        image7.setEventEnd(MainActivity.this);
-        image8.setEventEnd(MainActivity.this);
-        image9.setEventEnd(MainActivity.this);
-        image10.setEventEnd(MainActivity.this);
-        image11.setEventEnd(MainActivity.this);
-        image12.setEventEnd(MainActivity.this);
-        image13.setEventEnd(MainActivity.this);
-        image14.setEventEnd(MainActivity.this);
-        image15.setEventEnd(MainActivity.this);
+        txt_exp = findViewById(R.id.t1xt_exp_main);
+        image1 = findViewById(R.id.i1mage1);
+        image2 = findViewById(R.id.i1mage2);
+        image3 = findViewById(R.id.i1mage3);
+        image4 = findViewById(R.id.i1mage4);
+        image5 = findViewById(R.id.i1mage5);
+        image6 = findViewById(R.id.i1mage6);
+        image7 = findViewById(R.id.i1mage7);
+        image8 = findViewById(R.id.i1mage8);
+        image9 = findViewById(R.id.i1mage9);
+        image10 = findViewById(R.id.i1mage10);
+        image11 = findViewById(R.id.i1mage11);
+        image12 = findViewById(R.id.i1mage12);
+        image13 = findViewById(R.id.i1mage13);
+        image14 = findViewById(R.id.i1mage14);
+        image15 = findViewById(R.id.i1mage15);
+        txt_score = findViewById(R.id.t1xt_score_main);
+        txt_bet = findViewById(R.id.t1xt_bet);
+        image1.setEventEnd(SecondActivity.this);
+        image2.setEventEnd(SecondActivity.this);
+        image3.setEventEnd(SecondActivity.this);
+        image4.setEventEnd(SecondActivity.this);
+        image5.setEventEnd(SecondActivity.this);
+        image6.setEventEnd(SecondActivity.this);
+        image7.setEventEnd(SecondActivity.this);
+        image8.setEventEnd(SecondActivity.this);
+        image9.setEventEnd(SecondActivity.this);
+        image10.setEventEnd(SecondActivity.this);
+        image11.setEventEnd(SecondActivity.this);
+        image12.setEventEnd(SecondActivity.this);
+        image13.setEventEnd(SecondActivity.this);
+        image14.setEventEnd(SecondActivity.this);
+        image15.setEventEnd(SecondActivity.this);
         txt_exp.setText(String.valueOf(Common.EXP));
         txt_score.setText(String.valueOf(Common.SCORE));
     }
@@ -267,7 +268,7 @@ public class MainActivity extends AppCompatActivity implements IEventEnd {
             image15.setValueRandom(new Random().nextInt(6), one);
 
         } else {
-            Toast.makeText(MainActivity.this, "You have not enough money", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SecondActivity.this, "You have not enough money", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -288,7 +289,7 @@ public class MainActivity extends AppCompatActivity implements IEventEnd {
     }
 
     public void onClickLobby(View view) {
-        Intent intent = new Intent(MainActivity.this, LobbyActivity.class);
+        Intent intent = new Intent(SecondActivity.this, LobbyActivity.class);
         startActivity(intent);
         finish();
     }

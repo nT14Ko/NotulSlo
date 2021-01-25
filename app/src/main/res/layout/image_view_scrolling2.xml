@@ -5,13 +5,13 @@
     android:layout_height="wrap_content"
     android:padding="8dp">
     <ImageView
-        android:id="@+id/current_image"
-        android:src="@drawable/sevent_done"
+        android:id="@+id/current_image2"
+        android:src="@drawable/res1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <ImageView
-        android:id="@+id/next_image"
-        android:src="@drawable/sevent_done"
+        android:id="@+id/next_image2"
+        android:src="@drawable/res1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

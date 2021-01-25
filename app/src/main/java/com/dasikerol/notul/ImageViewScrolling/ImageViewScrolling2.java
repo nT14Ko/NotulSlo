@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 
 import com.dasikerol.notul.R;
 
-public class ImageViewScrolling extends FrameLayout {
+public class ImageViewScrolling2 extends FrameLayout {
     private static int ANIMATION_DUR = 150;
     ImageView current_image,next_image, win;
 
@@ -24,20 +24,20 @@ public class ImageViewScrolling extends FrameLayout {
         this.eventEnd = eventEnd;
     }
 
-    public ImageViewScrolling(@NonNull Context context) {
+    public ImageViewScrolling2(@NonNull Context context) {
         super(context);
         init(context);
     }
 
-    public ImageViewScrolling(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public ImageViewScrolling2(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init(context);
     }
 
     private void init(Context context) {
-        LayoutInflater.from(context).inflate(R.layout.image_view_scrolling, this);
-        current_image = getRootView().findViewById(R.id.current_image);
-        next_image = getRootView().findViewById(R.id.next_image);
+        LayoutInflater.from(context).inflate(R.layout.image_view_scrolling2, this);
+        current_image = getRootView().findViewById(R.id.current_image2);
+        next_image = getRootView().findViewById(R.id.next_image2);
         win = getRootView().findViewById(R.id.win);
 
         next_image.setTranslationY(getHeight());
@@ -54,19 +54,19 @@ public class ImageViewScrolling extends FrameLayout {
 
             @Override
             public void onAnimationEnd(Animator animation) {
-            setImage(current_image, old_value%6);
-            current_image.setTranslationY(0);
-            if(old_value != rotate_count){
-                setValueRandom(image, rotate_count);
-                old_value++;
-            }
-            else {
-                last_result = 0;
-                old_value = 0;
-                setImage(next_image, image);
-                current_image.setVisibility(INVISIBLE);
-                eventEnd.eventEnd(image%6, rotate_count);
-            }
+                setImage(current_image, old_value%6);
+                current_image.setTranslationY(0);
+                if(old_value != rotate_count){
+                    setValueRandom(image, rotate_count);
+                    old_value++;
+                }
+                else {
+                    last_result = 0;
+                    old_value = 0;
+                    setImage(next_image, image);
+                    current_image.setVisibility(INVISIBLE);
+                    eventEnd.eventEnd(image%6, rotate_count);
+                }
             }
 
             @Override
@@ -83,17 +83,20 @@ public class ImageViewScrolling extends FrameLayout {
 
     private void setImage(ImageView image_view, int value) {
         if (value == Util.BAR)
-            image_view.setImageResource(R.drawable.bar_done);
+            image_view.setImageResource(R.drawable.res1);
         else if (value == Util.SEVEN)
-            image_view.setImageResource(R.drawable.sevent_done);
+            image_view.setImageResource(R.drawable.res2);
         else if (value == Util.LEMON)
-            image_view.setImageResource(R.drawable.lemon_done);
+            image_view.setImageResource(R.drawable.res3);
         else if (value == Util.ORANGE)
-            image_view.setImageResource(R.drawable.orange_done);
+            image_view.setImageResource(R.drawable.res4);
         else if (value == Util.TRIPLE)
-            image_view.setImageResource(R.drawable.cherry_done);
+            image_view.setImageResource(R.drawable.res5);
         else
-            image_view.setImageResource(R.drawable.watermelon_done);
+            image_view.setImageResource(R.drawable.res1);
+        if (value == 5){
+            value = 0;
+        }
         image_view.setTag(value);
         last_result = value;
     }

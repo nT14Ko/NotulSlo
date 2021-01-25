@@ -4,30 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/slot1_bg"
-    tools:context=".MainActivity">
+    android:background="@drawable/slot2_bg"
+    tools:context=".SecondActivity">
 
 
     <RelativeLayout
-        android:id="@+id/relativeLayout"
+        android:id="@+id/r1elativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/txt_bet"
+        app:layout_constraintBottom_toTopOf="@+id/t1xt_bet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewTop">
+        app:layout_constraintTop_toBottomOf="@+id/i1mageViewTop">
 
         <FrameLayout
-            android:id="@+id/frame_bar"
+            android:id="@+id/f1rame_bar"
             android:layout_width="450dp"
-            android:layout_height="200dp"
+            android:layout_height="250dp"
             android:layout_centerInParent="true"
-            android:background="@drawable/slot1_bgg">
+            android:background="@drawable/slot2_bgg">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingTop="45dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -35,32 +36,32 @@
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:orientation="horizontal">
 
-                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling
-                        android:id="@+id/image1"
+                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling2
+                        android:id="@+id/i1mage1"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_weight="1" />
 
-                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling
-                        android:id="@+id/image2"
+                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling2
+                        android:id="@+id/i1mage2"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_weight="1" />
 
-                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling
-                        android:id="@+id/image3"
+                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling2
+                        android:id="@+id/i1mage3"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_weight="1" />
 
-                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling
-                        android:id="@+id/image4"
+                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling2
+                        android:id="@+id/i1mage4"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_weight="1" />
 
-                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling
-                        android:id="@+id/image5"
+                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling2
+                        android:id="@+id/i1mage5"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_weight="1" />
@@ -72,32 +73,32 @@
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:orientation="horizontal">
 
-                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling
-                        android:id="@+id/image6"
+                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling2
+                        android:id="@+id/i1mage6"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_weight="1" />
 
-                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling
-                        android:id="@+id/image7"
+                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling2
+                        android:id="@+id/i1mage7"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_weight="1" />
 
-                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling
-                        android:id="@+id/image8"
+                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling2
+                        android:id="@+id/i1mage8"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_weight="1" />
 
-                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling
-                        android:id="@+id/image9"
+                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling2
+                        android:id="@+id/i1mage9"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_weight="1" />
 
-                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling
-                        android:id="@+id/image10"
+                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling2
+                        android:id="@+id/i1mage10"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_weight="1" />
@@ -109,32 +110,32 @@
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:orientation="horizontal">
 
-                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling
-                        android:id="@+id/image11"
+                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling2
+                        android:id="@+id/i1mage11"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_weight="1" />
 
-                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling
-                        android:id="@+id/image12"
+                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling2
+                        android:id="@+id/i1mage12"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_weight="1" />
 
-                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling
-                        android:id="@+id/image13"
+                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling2
+                        android:id="@+id/i1mage13"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_weight="1" />
 
-                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling
-                        android:id="@+id/image14"
+                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling2
+                        android:id="@+id/i1mage14"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_weight="1" />
 
-                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling
-                        android:id="@+id/image15"
+                    <com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling2
+                        android:id="@+id/i1mage15"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_weight="1" />
@@ -146,7 +147,7 @@
     </RelativeLayout>
 
     <Button
-        android:id="@+id/buttonSpin"
+        android:id="@+id/b1uttonSpin"
         android:layout_width="134dp"
         android:layout_height="59dp"
         android:background="@drawable/spin"
@@ -155,7 +156,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/txt_bet"
+        android:id="@+id/t1xt_bet"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:background="@drawable/money_bg"
@@ -168,42 +169,42 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/buttonAutoSpin"
+        android:id="@+id/b1uttonAutoSpin"
         android:layout_width="134dp"
         android:layout_height="59dp"
         android:background="@drawable/auto"
         android:onClick="onClickAutoSpin"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonSpin" />
+        app:layout_constraintEnd_toStartOf="@+id/b1uttonSpin" />
 
     <ImageView
-        android:id="@+id/imageViewPlus"
+        android:id="@+id/i1mageViewPlus"
         android:layout_width="35dp"
         android:layout_height="55dp"
         android:onClick="upBet"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/txt_bet"
+        app:layout_constraintEnd_toEndOf="@+id/t1xt_bet"
         app:srcCompat="@drawable/plus" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/i1mageView3"
         android:layout_width="35dp"
         android:layout_height="55dp"
         android:onClick="downBet"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/txt_bet"
+        app:layout_constraintStart_toStartOf="@+id/t1xt_bet"
         app:srcCompat="@drawable/minus" />
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/i1mageView2"
         android:layout_width="30dp"
         android:layout_height="15dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageViewPlus"
-        app:layout_constraintStart_toStartOf="@+id/txt_bet"
+        app:layout_constraintEnd_toEndOf="@+id/i1mageViewPlus"
+        app:layout_constraintStart_toStartOf="@+id/t1xt_bet"
         app:srcCompat="@drawable/bet" />
     <ImageView
-        android:id="@+id/imageViewTop"
+        android:id="@+id/i1mageViewTop"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginStart="-16dp"
@@ -213,7 +214,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txt_score_main"
+        android:id="@+id/t1xt_score_main"
         android:layout_width="108dp"
         android:layout_height="24dp"
         android:background="@drawable/money_bg"
@@ -221,13 +222,13 @@
         android:text="1000"
         android:textColor="@android:color/white"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageViewTop"
+        app:layout_constraintBottom_toBottomOf="@+id/i1mageViewTop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txt_exp_main"
+        android:id="@+id/t1xt_exp_main"
         android:layout_width="108dp"
         android:layout_height="24dp"
         android:background="@drawable/money_bg"
@@ -235,42 +236,42 @@
         android:text="0"
         android:textColor="@android:color/white"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageViewTop"
+        app:layout_constraintBottom_toBottomOf="@+id/i1mageViewTop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.825"
-        app:layout_constraintStart_toEndOf="@+id/txt_score_main"
-        app:layout_constraintTop_toTopOf="@+id/imageViewTop" />
+        app:layout_constraintStart_toEndOf="@+id/t1xt_score_main"
+        app:layout_constraintTop_toTopOf="@+id/i1mageViewTop" />
 
 
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/i1mageView4"
         android:layout_width="34dp"
         android:layout_height="31dp"
-        app:layout_constraintBottom_toBottomOf="@+id/txt_score_main"
-        app:layout_constraintStart_toStartOf="@+id/txt_score_main"
-        app:layout_constraintTop_toTopOf="@+id/txt_score_main"
+        app:layout_constraintBottom_toBottomOf="@+id/t1xt_score_main"
+        app:layout_constraintStart_toStartOf="@+id/t1xt_score_main"
+        app:layout_constraintTop_toTopOf="@+id/t1xt_score_main"
         app:srcCompat="@drawable/coin" />
 
     <ImageView
-        android:id="@+id/imageViewLobby"
+        android:id="@+id/i1mageViewLobby"
         android:layout_width="130dp"
         android:layout_height="39dp"
         android:onClick="onClickLobby"
-        app:layout_constraintBottom_toBottomOf="@+id/imageViewTop"
-        app:layout_constraintEnd_toStartOf="@+id/txt_score_main"
+        app:layout_constraintBottom_toBottomOf="@+id/i1mageViewTop"
+        app:layout_constraintEnd_toStartOf="@+id/t1xt_score_main"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageViewTop"
+        app:layout_constraintTop_toTopOf="@+id/i1mageViewTop"
         app:srcCompat="@drawable/lobby" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/i1mageView6"
         android:layout_width="34dp"
         android:layout_height="31dp"
         android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toBottomOf="@+id/txt_exp_main"
-        app:layout_constraintStart_toStartOf="@+id/txt_exp_main"
-        app:layout_constraintTop_toTopOf="@+id/txt_exp_main"
+        app:layout_constraintBottom_toBottomOf="@+id/t1xt_exp_main"
+        app:layout_constraintStart_toStartOf="@+id/t1xt_exp_main"
+        app:layout_constraintTop_toTopOf="@+id/t1xt_exp_main"
         app:layout_constraintVertical_bias="0.428"
         app:srcCompat="@drawable/star" />
 

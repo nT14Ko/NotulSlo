@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LobbyActivity"
+    android:background="@drawable/lobby_bg">
+    <ImageView
+        android:id="@+id/imageViewTop"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="-16dp"
+        android:background="@drawable/top_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_score_lobby"
+        android:layout_width="108dp"
+        android:layout_height="24dp"
+        android:background="@drawable/money_bg"
+        android:gravity="center"
+        android:text="1000"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_exp_lobby"
+        android:layout_width="108dp"
+        android:layout_height="24dp"
+        android:background="@drawable/money_bg"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.825"
+        app:layout_constraintStart_toEndOf="@+id/txt_score_lobby"
+        app:layout_constraintTop_toTopOf="@+id/imageViewTop" />
+
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="34dp"
+        android:layout_height="31dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_score_lobby"
+        app:layout_constraintStart_toStartOf="@+id/txt_score_lobby"
+        app:layout_constraintTop_toTopOf="@+id/txt_score_lobby"
+        app:srcCompat="@drawable/coin" />
+
+    <ImageView
+        android:id="@+id/imageViewLobby"
+        android:layout_width="130dp"
+        android:layout_height="39dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewTop"
+        app:layout_constraintEnd_toStartOf="@+id/txt_score_lobby"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewTop"
+        app:srcCompat="@drawable/lobby" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="34dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_exp_lobby"
+        app:layout_constraintStart_toStartOf="@+id/txt_exp_lobby"
+        app:layout_constraintTop_toTopOf="@+id/txt_exp_lobby"
+        app:layout_constraintVertical_bias="0.428"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="280dp"
+        android:onClick="slot1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewTop"
+        app:srcCompat="@drawable/slot1" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="200dp"
+        android:layout_height="280dp"
+        android:onClick="slot2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewTop"
+        app:layout_constraintEnd_toStartOf="@id/imageView7"
+        app:srcCompat="@drawable/slot2" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="200dp"
+        android:layout_height="280dp"
+        android:onClick="slot3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewTop"
+        app:srcCompat="@drawable/slot3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
