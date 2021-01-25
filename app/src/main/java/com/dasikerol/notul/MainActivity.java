@@ -2,8 +2,12 @@ package com.dasikerol.notul;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -15,7 +19,7 @@ import com.dasikerol.notul.ImageViewScrolling.ImageViewScrolling;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements IEventEnd {
-
+    Toast toast;
     ImageViewScrolling image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11,image12,image13,image14,image15;
     Button buttonSpin;
     Button buttonAutoSpin;
@@ -30,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements IEventEnd {
     Boolean spinEnd;
     Boolean canChange;
     int bet;
+    SharedPreferences preferences;
+    private int score, exp;
 
     int count_done=0;
     @Override
@@ -85,8 +91,18 @@ public class MainActivity extends AppCompatActivity implements IEventEnd {
         image13.setEventEnd(MainActivity.this);
         image14.setEventEnd(MainActivity.this);
         image15.setEventEnd(MainActivity.this);
-        txt_exp.setText(String.valueOf(Common.EXP));
-        txt_score.setText(String.valueOf(Common.SCORE));
+        preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        score = preferences.getInt("score", 1000);
+        exp = preferences.getInt("exp", 0);
+        toast = new Toast(getApplicationContext());
+        toast.setDuration(Toast.LENGTH_SHORT);
+        LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = inflater.inflate(R.layout.toast, null);
+        toast.setView(view);
+        txt_exp.setText(String.valueOf(exp));
+        txt_score.setText(String.valueOf(score));
+        preferences.edit().putInt("score", score).apply();
+        preferences.edit().putInt("exp", exp).apply();
     }
 
 
@@ -97,11 +113,15 @@ public class MainActivity extends AppCompatActivity implements IEventEnd {
         } else {
             count_done = 0;
             if (image1.getValue() == image2.getValue() && image2.getValue() == image3.getValue() && image3.getValue() == image4.getValue() && image4.getValue() == image5.getValue()){
-                Toast.makeText(this, "You win SUPER BIG prise", Toast.LENGTH_SHORT).show();
-                Common.SCORE += bet * 20;
-                Common.EXP += bet * 20;
-                txt_exp.setText(String.valueOf(Common.EXP));
-                txt_score.setText(String.valueOf(Common.SCORE));
+//                Toast.makeText(this, "You win SUPER BIG prise", Toast.LENGTH_SHORT).show();
+                toast.show();
+                score += bet * 20;
+                exp += bet * 20;
+                txt_exp.setText(String.valueOf(exp));
+                txt_score.setText(String.valueOf(score));
+
+        preferences.edit().putInt("score", score).apply();
+        preferences.edit().putInt("exp", exp).apply();
                 image1.anim();
                 image2.anim();
                 image3.anim();
@@ -109,120 +129,167 @@ public class MainActivity extends AppCompatActivity implements IEventEnd {
                 image5.anim();
             } else if (image1.getValue() == image2.getValue() && image2.getValue() == image3.getValue() && image3.getValue() == image4.getValue() && image4.getValue() != image5.getValue()){
                 Toast.makeText(this, "You win prise", Toast.LENGTH_SHORT).show();
-                Common.SCORE += bet *10;
-                Common.EXP += bet * 10;
-                txt_exp.setText(String.valueOf(Common.EXP));
-                txt_score.setText(String.valueOf(Common.SCORE));
+                toast.show();
+                score += bet *10;
+                exp += bet * 10;
+                txt_exp.setText(String.valueOf(exp));
+                txt_score.setText(String.valueOf(score));
+
+        preferences.edit().putInt("score", score).apply();
+        preferences.edit().putInt("exp", exp).apply();
                 image1.anim();
                 image2.anim();
                 image3.anim();
                 image4.anim();
             } else if (image1.getValue() == image2.getValue() && image2.getValue() == image3.getValue() && image3.getValue() != image4.getValue()) {
-                Toast.makeText(this, "You win big prise", Toast.LENGTH_SHORT).show();
-                Common.SCORE += bet *2;
-                Common.EXP += bet * 2;
-                txt_exp.setText(String.valueOf(Common.EXP));
-                txt_score.setText(String.valueOf(Common.SCORE));
+//                Toast.makeText(this, "You win big prise", Toast.LENGTH_SHORT).show();
+                toast.show();
+                score += bet *2;
+                exp += bet * 2;
+                txt_exp.setText(String.valueOf(exp));
+                txt_score.setText(String.valueOf(score));
+
+        preferences.edit().putInt("score", score).apply();
+        preferences.edit().putInt("exp", exp).apply();
                 image1.anim();
                 image2.anim();
                 image3.anim();
             }else if (image1.getValue() == image2.getValue() && image2.getValue() != image3.getValue() ) {
-                Toast.makeText(this, "You win small prise", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "You win small prise", Toast.LENGTH_SHORT).show();
                 image1.anim();
-                Common.SCORE += bet;
-                Common.EXP += bet;
-                txt_exp.setText(String.valueOf(Common.EXP));
-                txt_score.setText(String.valueOf(Common.SCORE));
+                toast.show();
+                score += bet;
+                exp += bet;
+                txt_exp.setText(String.valueOf(exp));
+                txt_score.setText(String.valueOf(score));
+
+        preferences.edit().putInt("score", score).apply();
+        preferences.edit().putInt("exp", exp).apply();
                 image1.anim();
                 image2.anim();
             }
 
 
             if (image6.getValue() == image7.getValue() && image7.getValue() == image8.getValue() && image8.getValue() == image9.getValue() && image9.getValue() == image10.getValue()){
-                Toast.makeText(this, "You win SUPER BIG prise", Toast.LENGTH_SHORT).show();
-                Common.SCORE += bet * 20;
-                Common.EXP += bet * 20;
-                txt_exp.setText(String.valueOf(Common.EXP));
-                txt_score.setText(String.valueOf(Common.SCORE));
+//                Toast.makeText(this, "You win SUPER BIG prise", Toast.LENGTH_SHORT).show();
+                score += bet * 20;
+                toast.show();
+                exp += bet * 20;
+                txt_exp.setText(String.valueOf(exp));
+                txt_score.setText(String.valueOf(score));
+
+        preferences.edit().putInt("score", score).apply();
+        preferences.edit().putInt("exp", exp).apply();
                 image6.anim();
                 image7.anim();
                 image8.anim();
                 image9.anim();
                 image10.anim();
             } else if (image6.getValue() == image7.getValue() && image7.getValue() == image8.getValue() && image8.getValue() == image9.getValue() && image9.getValue() != image10.getValue()){
-                Toast.makeText(this, "You win BIG prise", Toast.LENGTH_SHORT).show();
-                Common.SCORE += bet * 10;
-                Common.EXP += bet * 10;
-                txt_exp.setText(String.valueOf(Common.EXP));
-                txt_score.setText(String.valueOf(Common.SCORE));
+//                Toast.makeText(this, "You win BIG prise", Toast.LENGTH_SHORT).show();
+                score += bet * 10;
+                toast.show();
+                exp += bet * 10;
+                txt_exp.setText(String.valueOf(exp));
+                txt_score.setText(String.valueOf(score));
+
+        preferences.edit().putInt("score", score).apply();
+        preferences.edit().putInt("exp", exp).apply();
                 image6.anim();
                 image7.anim();
                 image8.anim();
                 image9.anim();
             } else if (image6.getValue() == image7.getValue() && image7.getValue() == image8.getValue() && image8.getValue() != image9.getValue()) {
-                Toast.makeText(this, "You win big prise", Toast.LENGTH_SHORT).show();
-                Common.SCORE += bet * 2;
-                Common.EXP += bet * 2;
-                txt_exp.setText(String.valueOf(Common.EXP));
-                txt_score.setText(String.valueOf(Common.SCORE));
+//                Toast.makeText(this, "You win big prise", Toast.LENGTH_SHORT).show();
+                score += bet * 2;
+                toast.show();
+                exp += bet * 2;
+                txt_exp.setText(String.valueOf(exp));
+                txt_score.setText(String.valueOf(score));
+
+        preferences.edit().putInt("score", score).apply();
+        preferences.edit().putInt("exp", exp).apply();
                 image6.anim();
                 image7.anim();
                 image8.anim();
             }else if (image6.getValue() == image7.getValue() && image7.getValue() != image8.getValue() ) {
-                Toast.makeText(this, "You win small prise", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "You win small prise", Toast.LENGTH_SHORT).show();
                 image6.anim();
-                Common.SCORE += bet;
-                Common.EXP += bet;
-                txt_exp.setText(String.valueOf(Common.EXP));
-                txt_score.setText(String.valueOf(Common.SCORE));
+                toast.show();
+                score += bet;
+                exp += bet;
+                txt_exp.setText(String.valueOf(exp));
+                txt_score.setText(String.valueOf(score));
+
+        preferences.edit().putInt("score", score).apply();
+        preferences.edit().putInt("exp", exp).apply();
                 image6.anim();
                 image7.anim();
             }
 
 
             if (image11.getValue() == image12.getValue() && image12.getValue() == image13.getValue() && image3.getValue() == image14.getValue() && image14.getValue() == image15.getValue()){
-                Toast.makeText(this, "You win SUPER BIG prise", Toast.LENGTH_SHORT).show();
-                Common.SCORE += bet * 20;
-                Common.EXP += bet * 20;
-                txt_exp.setText(String.valueOf(Common.EXP));
-                txt_score.setText(String.valueOf(Common.SCORE));
+//                Toast.makeText(this, "You win SUPER BIG prise", Toast.LENGTH_SHORT).show();
+                score += bet * 20;
+                toast.show();
+                exp += bet * 20;
+                txt_exp.setText(String.valueOf(exp));
+                txt_score.setText(String.valueOf(score));
+
+        preferences.edit().putInt("score", score).apply();
+        preferences.edit().putInt("exp", exp).apply();
                 image11.anim();
                 image12.anim();
                 image13.anim();
                 image14.anim();
                 image15.anim();
             } else if (image11.getValue() == image12.getValue() && image12.getValue() == image13.getValue() && image13.getValue() == image14.getValue() && image14.getValue() != image15.getValue()){
-                Toast.makeText(this, "You win BIG prise", Toast.LENGTH_SHORT).show();
-                Common.SCORE += bet * 20/2;
-                Common.EXP += bet * 10;
-                txt_exp.setText(String.valueOf(Common.EXP));
-                txt_score.setText(String.valueOf(Common.SCORE));
+//                Toast.makeText(this, "You win BIG prise", Toast.LENGTH_SHORT).show();
+                score += bet * 20/2;
+                toast.show();
+                exp += bet * 10;
+                txt_exp.setText(String.valueOf(exp));
+                txt_score.setText(String.valueOf(score));
+
+        preferences.edit().putInt("score", score).apply();
+        preferences.edit().putInt("exp", exp).apply();
                 image11.anim();
                 image12.anim();
                 image13.anim();
                 image14.anim();
             } else if (image11.getValue() == image12.getValue() && image12.getValue() == image13.getValue() && image13.getValue() != image14.getValue()) {
-                Toast.makeText(this, "You win big prise", Toast.LENGTH_SHORT).show();
-                Common.SCORE += bet * 20/10;
-                Common.EXP += bet * 2;
-                txt_exp.setText(String.valueOf(Common.EXP));
-                txt_score.setText(String.valueOf(Common.SCORE));
+//                Toast.makeText(this, "You win big prise", Toast.LENGTH_SHORT).show();
+                score += bet * 20/10;
+                toast.show();
+                exp += bet * 2;
+                txt_exp.setText(String.valueOf(exp));
+                txt_score.setText(String.valueOf(score));
+
+        preferences.edit().putInt("score", score).apply();
+        preferences.edit().putInt("exp", exp).apply();
                 image11.anim();
                 image12.anim();
                 image13.anim();
             }else if (image11.getValue() == image12.getValue() && image12.getValue() != image13.getValue() ) {
-                Toast.makeText(this, "You win small prise", Toast.LENGTH_SHORT).show();
-                Common.SCORE += bet * 20/20;
-                Common.EXP += bet;
-                txt_exp.setText(String.valueOf(Common.EXP));
+//                Toast.makeText(this, "You win small prise", Toast.LENGTH_SHORT).show();
+                score += bet * 20/20;
+                toast.show();
+                exp += bet;
+                txt_exp.setText(String.valueOf(exp));
                 image11.anim();
-                txt_score.setText(String.valueOf(Common.SCORE));
+                txt_score.setText(String.valueOf(score));
+
+        preferences.edit().putInt("score", score).apply();
+        preferences.edit().putInt("exp", exp).apply();
                 image11.anim();
                 image12.anim();
             }
             canChange = true;
-            Common.SCORE -= bet;
-            txt_score.setText(String.valueOf(Common.SCORE));
+            score -= bet;
+            txt_score.setText(String.valueOf(score));
+
+        preferences.edit().putInt("score", score).apply();
+        preferences.edit().putInt("exp", exp).apply();
             if (autoSpin){
                 spin();
             }
@@ -247,7 +314,7 @@ public class MainActivity extends AppCompatActivity implements IEventEnd {
         spin();
     }
     private void spin(){
-        if(Common.SCORE >= 50){
+        if(score >= 50){
             canChange = false;
             spinEnd = false;
             image1.setValueRandom(new Random().nextInt(6), one);
