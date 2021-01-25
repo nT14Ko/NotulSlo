@@ -114,7 +114,10 @@ public class SecondActivity extends AppCompatActivity implements IEventEnd  {
         } else {
             count_done = 0;
             if (image1.getValue() == image2.getValue() && image2.getValue() == image3.getValue() && image3.getValue() == image4.getValue() && image4.getValue() == image5.getValue()){
-//                Toast.makeText(this, "You win SUPER BIG prise", Toast.LENGTH_SHORT).show();
+////
+                toast.show();
+// Toast.makeText(this, "You win SUPER BIG prise", Toast.LENGTH_SHORT).show();
+                toast.show();
                 score += bet * 20;
                 exp += bet * 20;
                 txt_exp.setText(String.valueOf(exp));
@@ -127,7 +130,9 @@ public class SecondActivity extends AppCompatActivity implements IEventEnd  {
                 image4.anim();
                 image5.anim();
             } else if (image1.getValue() == image2.getValue() && image2.getValue() == image3.getValue() && image3.getValue() == image4.getValue() && image4.getValue() != image5.getValue()){
-                Toast.makeText(this, "You win prise", Toast.LENGTH_SHORT).show();
+//
+                toast.show();
+//                Toast.makeText(this, "You win prise", Toast.LENGTH_SHORT).show();
                 score += bet *10;
                 exp += bet * 10;
                 txt_exp.setText(String.valueOf(exp));
@@ -140,7 +145,9 @@ public class SecondActivity extends AppCompatActivity implements IEventEnd  {
                 image3.anim();
                 image4.anim();
             } else if (image1.getValue() == image2.getValue() && image2.getValue() == image3.getValue() && image3.getValue() != image4.getValue()) {
-                Toast.makeText(this, "You win big prise", Toast.LENGTH_SHORT).show();
+//
+                toast.show();
+//                Toast.makeText(this, "You win big prise", Toast.LENGTH_SHORT).show();
                 score += bet *2;
                 exp += bet * 2;
                 txt_exp.setText(String.valueOf(exp));
@@ -152,7 +159,9 @@ public class SecondActivity extends AppCompatActivity implements IEventEnd  {
                 image2.anim();
                 image3.anim();
             }else if (image1.getValue() == image2.getValue() && image2.getValue() != image3.getValue() ) {
-                Toast.makeText(this, "You win small prise", Toast.LENGTH_SHORT).show();
+//
+                toast.show();
+//                Toast.makeText(this, "You win small prise", Toast.LENGTH_SHORT).show();
                 image1.anim();
                 score += bet;
                 exp += bet;
@@ -167,7 +176,9 @@ public class SecondActivity extends AppCompatActivity implements IEventEnd  {
 
 
             if (image6.getValue() == image7.getValue() && image7.getValue() == image8.getValue() && image8.getValue() == image9.getValue() && image9.getValue() == image10.getValue()){
-                Toast.makeText(this, "You win SUPER BIG prise", Toast.LENGTH_SHORT).show();
+//
+                toast.show();
+//                Toast.makeText(this, "You win SUPER BIG prise", Toast.LENGTH_SHORT).show();
                 score += bet * 20;
                 exp += bet * 20;
                 txt_exp.setText(String.valueOf(exp));
@@ -181,7 +192,9 @@ public class SecondActivity extends AppCompatActivity implements IEventEnd  {
                 image9.anim();
                 image10.anim();
             } else if (image6.getValue() == image7.getValue() && image7.getValue() == image8.getValue() && image8.getValue() == image9.getValue() && image9.getValue() != image10.getValue()){
-                Toast.makeText(this, "You win BIG prise", Toast.LENGTH_SHORT).show();
+//
+                toast.show();
+//                Toast.makeText(this, "You win BIG prise", Toast.LENGTH_SHORT).show();
                 score += bet * 10;
                 exp += bet * 10;
                 txt_exp.setText(String.valueOf(exp));
@@ -194,7 +207,9 @@ public class SecondActivity extends AppCompatActivity implements IEventEnd  {
                 image8.anim();
                 image9.anim();
             } else if (image6.getValue() == image7.getValue() && image7.getValue() == image8.getValue() && image8.getValue() != image9.getValue()) {
-                Toast.makeText(this, "You win big prise", Toast.LENGTH_SHORT).show();
+//
+                toast.show();
+//                Toast.makeText(this, "You win big prise", Toast.LENGTH_SHORT).show();
                 score += bet * 2;
                 exp += bet * 2;
                 txt_exp.setText(String.valueOf(exp));
@@ -206,7 +221,9 @@ public class SecondActivity extends AppCompatActivity implements IEventEnd  {
                 image7.anim();
                 image8.anim();
             }else if (image6.getValue() == image7.getValue() && image7.getValue() != image8.getValue() ) {
-                Toast.makeText(this, "You win small prise", Toast.LENGTH_SHORT).show();
+//
+                toast.show();
+//                Toast.makeText(this, "You win small prise", Toast.LENGTH_SHORT).show();
                 image6.anim();
                 score += bet;
                 exp += bet;
@@ -221,7 +238,9 @@ public class SecondActivity extends AppCompatActivity implements IEventEnd  {
 
 
             if (image11.getValue() == image12.getValue() && image12.getValue() == image13.getValue() && image3.getValue() == image14.getValue() && image14.getValue() == image15.getValue()){
-                Toast.makeText(this, "You win SUPER BIG prise", Toast.LENGTH_SHORT).show();
+//
+                toast.show();
+//                Toast.makeText(this, "You win SUPER BIG prise", Toast.LENGTH_SHORT).show();
                 score += bet * 20;
                 exp += bet * 20;
                 txt_exp.setText(String.valueOf(exp));
@@ -235,7 +254,9 @@ public class SecondActivity extends AppCompatActivity implements IEventEnd  {
                 image14.anim();
                 image15.anim();
             } else if (image11.getValue() == image12.getValue() && image12.getValue() == image13.getValue() && image13.getValue() == image14.getValue() && image14.getValue() != image15.getValue()){
-                Toast.makeText(this, "You win BIG prise", Toast.LENGTH_SHORT).show();
+//
+                toast.show();
+//                Toast.makeText(this, "You win BIG prise", Toast.LENGTH_SHORT).show();
                 score += bet * 20/2;
                 exp += bet * 10;
                 txt_exp.setText(String.valueOf(exp));
@@ -248,7 +269,9 @@ public class SecondActivity extends AppCompatActivity implements IEventEnd  {
                 image13.anim();
                 image14.anim();
             } else if (image11.getValue() == image12.getValue() && image12.getValue() == image13.getValue() && image13.getValue() != image14.getValue()) {
-                Toast.makeText(this, "You win big prise", Toast.LENGTH_SHORT).show();
+//
+                toast.show();
+//                Toast.makeText(this, "You win big prise", Toast.LENGTH_SHORT).show();
                 score += bet * 20/10;
                 exp += bet * 2;
                 txt_exp.setText(String.valueOf(exp));
@@ -260,7 +283,9 @@ public class SecondActivity extends AppCompatActivity implements IEventEnd  {
                 image12.anim();
                 image13.anim();
             }else if (image11.getValue() == image12.getValue() && image12.getValue() != image13.getValue() ) {
-                Toast.makeText(this, "You win small prise", Toast.LENGTH_SHORT).show();
+//
+                toast.show();
+//                Toast.makeText(this, "You win small prise", Toast.LENGTH_SHORT).show();
                 score += bet * 20/20;
                 exp += bet;
                 txt_exp.setText(String.valueOf(exp));
@@ -322,7 +347,9 @@ public class SecondActivity extends AppCompatActivity implements IEventEnd  {
             image15.setValueRandom(new Random().nextInt(6), one);
 
         } else {
-            Toast.makeText(SecondActivity.this, "You have not enough money", Toast.LENGTH_SHORT).show();
+
+                toast.show();
+//            Toast.makeText(SecondActivity.this, "You have not enough money", Toast.LENGTH_SHORT).show();
         }
     }
 
