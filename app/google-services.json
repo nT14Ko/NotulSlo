@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "460659734689",
+    "project_id": "dasikerol-ccdec",
+    "storage_bucket": "dasikerol-ccdec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460659734689:android:d7fae2b5a1d1b4985ad8e0",
+        "android_client_info": {
+          "package_name": "com.dasikerol.notul"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460659734689-h7i6mi6d5qqf5661lunah9lofqmr45tm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBan5C1X1fjqfxyg50Lp4vLhVI9l2cZd9M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460659734689-h7i6mi6d5qqf5661lunah9lofqmr45tm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
