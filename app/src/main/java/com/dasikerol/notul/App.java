@@ -15,7 +15,7 @@ public class App extends Application {
 
     public static String af_data;
 
-    SplashActivity splashScreen = new SplashActivity();;
+    SplashActivity splashActivity = new SplashActivity();
 
 
     @Override
@@ -30,8 +30,8 @@ public class App extends Application {
                     params.append(attrName).append("=").append(conversionData.get(attrName)).append("&");
                 }
                 af_data = params.toString().replace(" ", "_");
-                Log.d("main", af_data);
-                splashScreen.afData(af_data);
+                //Log.d("main", af_data);
+                splashActivity.afData(af_data);
             }
 
             @Override

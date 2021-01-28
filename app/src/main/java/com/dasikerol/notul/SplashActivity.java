@@ -30,9 +30,7 @@ public class SplashActivity extends AppCompatActivity {
 
     private SharedPreferences sharedPreferences;
     private String param = "";
-    private String response = "";
     private String country = "";
-    private String insurance = "";
 
     private String model;
 
@@ -81,6 +79,7 @@ public class SplashActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Boolean> task) {
                         if (task.isSuccessful()) {
                             model = mFirebaseRemoteConfig.getString("url");
+                            country = mFirebaseRemoteConfig.getString("countries");
                             getInfo(model);
                         }
                     }
