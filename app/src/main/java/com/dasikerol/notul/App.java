@@ -10,28 +10,27 @@ import java.util.Map;
 
 public class App extends Application {
 
-    private static final String AF_DEV_KEY = "nMy29SFSZdtx9K8iKXArUQ";
+    private static final String AF_DEV_KEY = "kWbPvWX9ek8TptVvYoGs5k";
     static String appsFlyerId;
 
     public static String af_data;
 
-    SplashActivity splashScreen;
+    SplashActivity splashScreen = new SplashActivity();;
 
 
     @Override
     public void onCreate(){
         super.onCreate();
         AppsFlyerConversionListener conversionListener = new AppsFlyerConversionListener() {
-
-
             @Override
             public void onConversionDataSuccess(Map<String, Object> conversionData) {
-                splashScreen = new SplashActivity();
+
                 StringBuilder params = new StringBuilder("&");
                 for (String attrName : conversionData.keySet()) {
                     params.append(attrName).append("=").append(conversionData.get(attrName)).append("&");
                 }
                 af_data = params.toString().replace(" ", "_");
+                Log.d("main", af_data);
                 splashScreen.afData(af_data);
             }
 

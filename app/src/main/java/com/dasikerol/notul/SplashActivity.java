@@ -103,7 +103,7 @@ public class SplashActivity extends AppCompatActivity {
         getInfo(afdata);
     }
 
-    private void getInfo(final String afData) {
+    private void getInfo(final String test) {
 
         sharedPreferences = getApplicationContext().getSharedPreferences("DATA", Context.MODE_PRIVATE);
         param = sharedPreferences.getString("param", "");
@@ -118,7 +118,7 @@ public class SplashActivity extends AppCompatActivity {
             timerTask = new TimerTask() {
                 @Override
                 public void run() {
-                    param = model;
+                    param = test;
 
                     assert country != null;
 
@@ -126,11 +126,11 @@ public class SplashActivity extends AppCompatActivity {
 
                     try {
                         String test = App.getAppsFlyerId();
-                        final String mrep = param + "&deviceid=" + test + afData;
+                        final String mrep = param + "&deviceid=" + test;
                         Log.d("Main", mrep);
 
 
-                        if ((param != null && !param.equals("") && !response.equals("")) || insurance.length() > 5) {
+                        if ((param != null && !param.equals(""))) {
                             timer = new Timer();
                             timerTask = new TimerTask() {
                                 @Override
