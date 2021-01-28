@@ -42,7 +42,6 @@ public class App extends Application {
 
             @Override
             public void onAppOpenAttribution(Map<String, String> attributionData) {
-
                 for (String attrName : attributionData.keySet()) {
                     Log.d("LOG_TAG", "attribute: " + attrName + " = " + attributionData.get(attrName));
                 }
